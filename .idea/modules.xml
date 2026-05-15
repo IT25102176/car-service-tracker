@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AutoServe.iml" filepath="$PROJECT_DIR$/.idea/AutoServe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutoServe/AutoServe.iml" filepath="$PROJECT_DIR$/AutoServe/AutoServe.iml" />
     </modules>
   </component>
 </project>
