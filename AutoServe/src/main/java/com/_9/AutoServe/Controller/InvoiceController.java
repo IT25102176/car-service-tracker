@@ -1,5 +1,13 @@
 package com._9.AutoServe.Controller;
 
+import com.se1020.carservice.model.Invoice;
+import com.se1020.carservice.service.InvoiceService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/invoices")
 public class InvoiceController {
     private final InvoiceService invoiceService;
 

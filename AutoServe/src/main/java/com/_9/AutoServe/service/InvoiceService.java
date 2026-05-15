@@ -1,5 +1,17 @@
 package com._9.AutoServe.service;
 
+import com.se1020.carservice.model.Invoice;
+import com.se1020.carservice.repository.InvoiceRepository;
+import com.se1020.carservice.repository.ServiceRecordRepository;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.UUID;
+
+@Service
+
 public class InvoiceService {
     private final InvoiceRepository repository;
     private final ServiceRecordRepository serviceRecordRepository;
