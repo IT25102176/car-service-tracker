@@ -1,11 +1,9 @@
 package com._9.AutoServe.service;
 
 import com._9.AutoServe.model.ServiceRecord;
+import com._9.AutoServe.repository.InvoiceRepository;
 import com._9.AutoServe.repository.ServiceRecordRepository;
-import com.se1020.carservice.model.ServiceRecord;
-import com.se1020.carservice.repository.InvoiceRepository;
-import com.se1020.carservice.repository.ServiceRecordRepository;
-import com.se1020.carservice.repository.VehicleRepository;
+import com._9.AutoServe.repository.VehicleRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

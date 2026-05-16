@@ -2,8 +2,8 @@ package com._9.AutoServe.Controller;
 
 import com._9.AutoServe.model.ServiceRecord;
 import com._9.AutoServe.service.ServiceRecordService;
-import com.se1020.carservice.model.ServiceRecord;
-import com.se1020.carservice.service.ServiceRecordService;
+import com._9.AutoServe.model.ServiceRecord;
+import com._9.AutoServe.service.ServiceRecordService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

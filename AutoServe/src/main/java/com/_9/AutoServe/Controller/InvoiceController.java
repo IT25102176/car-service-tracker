@@ -1,7 +1,7 @@
 package com._9.AutoServe.Controller;
 
-import com.se1020.carservice.model.Invoice;
-import com.se1020.carservice.service.InvoiceService;
+import com._9.AutoServe.model.Invoice;
+import com._9.AutoServe.service.InvoiceService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
