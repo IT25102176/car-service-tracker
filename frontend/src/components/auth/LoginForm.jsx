@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { usersApi } from "@/lib/api";
-import { clearCustomerSession, setCustomerSession } from "@/lib/customerSession";
+import {
+  clearCustomerSession,
+  setCustomerSession,
+} from "@/lib/customerSession";
 import { clearAdminSession, setAdminSession } from "@/lib/adminSession";
 
 export function LoginForm() {
@@ -60,7 +63,9 @@ export function LoginForm() {
           type="button"
           onClick={() => setMode("admin")}
           className={`rounded-xl px-4 py-2 text-sm font-medium ${
-            mode === "admin" ? "bg-white text-gray-900 shadow-sm" : "text-gray-600"
+            mode === "admin"
+              ? "bg-white text-gray-900 shadow-sm"
+              : "text-gray-600"
           }`}
         >
           Admin Login
@@ -69,7 +74,9 @@ export function LoginForm() {
           type="button"
           onClick={() => setMode("customer")}
           className={`rounded-xl px-4 py-2 text-sm font-medium ${
-            mode === "customer" ? "bg-white text-gray-900 shadow-sm" : "text-gray-600"
+            mode === "customer"
+              ? "bg-white text-gray-900 shadow-sm"
+              : "text-gray-600"
           }`}
         >
           Customer Login
@@ -84,7 +91,7 @@ export function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="h-12 rounded-2xl px-4 text-base transition duration-500"
+            className="h-12 rounded-2xl px-4 bg-gray-100 border text-base transition duration-500"
           />
           <Input
             type="password"
@@ -92,7 +99,7 @@ export function LoginForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="h-12 rounded-2xl px-4 text-base transition duration-500"
+            className="h-12 rounded-2xl px-4 bg-gray-100 border  text-base transition duration-500"
           />
         </div>
       ) : (
