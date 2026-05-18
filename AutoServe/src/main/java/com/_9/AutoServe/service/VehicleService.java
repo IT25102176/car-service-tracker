@@ -37,19 +37,23 @@ public class VehicleService {
         this.maintenanceReminderRepository = maintenanceReminderRepository;
         this.appointmentRepository = appointmentRepository;
     }
-
+    
+  // Gets all vehicles with their correct vehicle type.
     public List<Vehicle> getAll() {
-        return repository.findAll().stream()
+        return repository
+                .findAll()
+                .stream()
                 .map(this::toVehicleSubtype)
                 .toList();
     }
-
+   // Gets one vehicle by id with the correct vehicle type.
     public Vehicle getById(String id) {
         return repository.findById(id)
                 .map(this::toVehicleSubtype)
                 .orElseThrow(() -> new NoSuchElementException("Vehicle not found: " + id));
     }
-
+    
+   // Creates a new vehicle and saves it.
     public Vehicle create(Vehicle vehicle) {
         Vehicle vehicleByType = toVehicleSubtype(vehicle);
         if (vehicle.getId() == null || vehicle.getId().isBlank()) {
@@ -61,7 +65,7 @@ public class VehicleService {
         }
         return repository.save(vehicleByType);
     }
-
+   // Updates an existing vehicle.
     public Vehicle update(String id, Vehicle vehicle) {
         getById(id);
         Vehicle vehicleByType = toVehicleSubtype(vehicle);
@@ -72,7 +76,7 @@ public class VehicleService {
         }
         return repository.save(vehicleByType);
     }
-
+  // Deletes a vehicle if no other records are using it.
     public void delete(String id) {
         boolean hasServices = serviceRecordRepository.findAll().stream()
                 .anyMatch(service -> id.equals(service.getVehicleId()));
@@ -96,7 +100,7 @@ public class VehicleService {
             throw new NoSuchElementException("Vehicle not found: " + id);
         }
     }
-
+   // Copies the owner's details from the selected user into the vehicle.
     private void syncOwnerFromUser(Vehicle vehicle) {
         if (vehicle.getOwnerUserId() == null || vehicle.getOwnerUserId().isBlank()) {
             throw new IllegalArgumentException("ownerUserId is required");
@@ -111,7 +115,7 @@ public class VehicleService {
         vehicle.setOwnerPhone(owner.getPhone());
         vehicle.setOwnerEmail(owner.getEmail());
     }
-
+    // Converts a vehicle into the correct class based on the vehicle type.
     private Vehicle toVehicleSubtype(Vehicle vehicle) {
         if (vehicle == null) {
             return null;
