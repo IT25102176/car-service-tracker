@@ -1,0 +1,12 @@
+[ {
+  "completedDate" : null,
+  "cost" : 80000.0,
+  "createdAt" : "2026-05-18T04:39:24.816",
+  "description" : "premium",
+  "id" : "service-1779079164816",
+  "serviceType" : "SERVICE",
+  "status" : "pending",
+  "updatedAt" : "2026-05-18T04:39:24.816",
+  "vehicleId" : "vehicle-1779079122825",
+  "vehicleName" : "2022 BMW M4 (AAA-0000)"
+} ]

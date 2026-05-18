@@ -1,0 +1,18 @@
+[ {
+  "createdAt" : "2026-05-18T04:38:42.825",
+  "id" : "vehicle-1779079122825",
+  "imageUrl" : "",
+  "lastServiceDate" : null,
+  "licensePlate" : "AAA-0000",
+  "maintenanceProfile" : "Standard car service interval",
+  "make" : "BMW",
+  "mileage" : 20000,
+  "model" : "M4",
+  "ownerEmail" : "Jay@123",
+  "ownerName" : "JaY",
+  "ownerPhone" : "0123456789",
+  "ownerUserId" : "user-1779079070793",
+  "vehicleType" : "car",
+  "vin" : "DFSDHUFS15156",
+  "year" : 2022
+} ]
