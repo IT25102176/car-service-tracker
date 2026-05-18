@@ -29,7 +29,7 @@ public class Appointment {      // Attributes/Variables
     }
     public void setId(String id) {
         this.id = id;
-    }
+    } //
 
 
     public String getVehicleId() {
