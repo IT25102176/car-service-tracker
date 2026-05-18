@@ -27,9 +27,9 @@ public class Appointment {      // Attributes/Variables
     public String getId() {
         return id;
     }
-    void setId(String id) {
+    public void setId(String id) {
         this.id = id;
-    }
+    } //
 
 
     public String getVehicleId() {
